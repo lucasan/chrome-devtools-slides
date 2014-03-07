@@ -105,6 +105,28 @@ module.exports = function(grunt) {
 				files: [ 'css/theme/source/*.scss', 'css/theme/template/*.scss' ],
 				tasks: 'themes'
 			}
+		},
+
+		htmlcompressor: {
+			compile: {
+				files: {
+					'index.html': 'src/index.html'
+				},
+				options: {
+					type: 'html',
+					preserveServerScript: true,
+					preserveLineBreaks: true,
+					compressJs: true
+				}
+			}
+  	},
+
+  	lineremover: {
+			noOptions: {
+				files: {
+					'index.html': 'index.html'
+				}
+			}
 		}
 
 	});
@@ -118,9 +140,11 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks( 'grunt-contrib-sass' );
 	grunt.loadNpmTasks( 'grunt-contrib-connect' );
 	grunt.loadNpmTasks( 'grunt-zip' );
+	grunt.loadNpmTasks( 'grunt-htmlcompressor' );
+	grunt.loadNpmTasks( 'grunt-line-remover' );
 
 	// Default task
-	grunt.registerTask( 'default', [ 'htmlcompressor', 'jshint', 'cssmin', 'uglify', 'qunit' ] );
+	grunt.registerTask( 'default', [ 'jshint', 'cssmin', 'uglify', 'qunit' ] );
 
 	// Theme task
 	grunt.registerTask( 'themes', [ 'sass' ] );
@@ -129,7 +153,7 @@ module.exports = function(grunt) {
 	grunt.registerTask( 'package', [ 'default', 'zip' ] );
 
 	// Serve presentation locally
-	grunt.registerTask( 'serve', [ 'connect', 'watch' ] );
+	grunt.registerTask( 'serve', [ 'htmlcompressor', 'lineremover', 'connect', 'watch' ] );
 
 	// Run tests
 	grunt.registerTask( 'test', [ 'jshint', 'qunit' ] );
