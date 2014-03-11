@@ -42,6 +42,13 @@ $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
     }
   }
 
+  section {
+    .img-no-frame {
+      border: 0;
+      box-shadow: none;
+    }
+  }
+
   .slide-number {
     background-color: #8c9f2b;
     bottom: 20px;

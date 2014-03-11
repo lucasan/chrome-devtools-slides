@@ -139,6 +139,9 @@ body {
 
 .reveal .white-font-color h1, .reveal .white-font-color h3 {
   color: #fff; }
+.reveal section .img-no-frame {
+  border: 0;
+  box-shadow: none; }
 .reveal .slide-number {
   background-color: #8c9f2b;
   bottom: 20px;
