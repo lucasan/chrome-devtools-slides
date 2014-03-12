@@ -41,6 +41,9 @@ module.exports = function(grunt) {
 			main: {
 				files: {
 					'css/theme/inqbation.css': 'css/theme/source/inqbation.scss'
+				},
+				options: {
+					sourcemap: true
 				}
 			}
 		},

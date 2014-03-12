@@ -49,9 +49,20 @@ $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
     }
   }
 
+  .brand {
+    background: transparent url('/img/inQbation-logo-RGB.png') no-repeat right 110px;
+    background-size: 250px 60px;
+    bottom: 20px;
+    height: 170px;
+    left: 142px;
+    position: fixed;
+    width: 250px;
+    z-index: 30;
+  }
+
   .slide-number {
     background-color: #8c9f2b;
-    bottom: 20px;
+    bottom: 30px;
     color: white;
     font-size: 1em;
     height: 50px;
@@ -62,5 +73,24 @@ $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
 
     -moz-border-radius: 30px; /* or 50% */
     border-radius: 30px; /* or 50% */
+  }
+
+  .our-staff {
+    padding: 0!important;
+    top: -410px!important;
+  }
+
+  .about-me {
+    > div {
+      text-align: left;
+
+      img {
+        float: left;
+        margin-right: 25px;
+      }
+      h2 {
+        margin-bottom: 35px;
+      }
+    }
   }
 }

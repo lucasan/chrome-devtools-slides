@@ -46,13 +46,51 @@
           <h3>by Juan Obando</h3>
         </section>
 
+        <section class="our-staff">
+          <h1>Our staff</h1>
+          <img class="img-no-frame" src="/img/inqbation-team-headshots.png" alt="inQbation Staff">
+        </section>
+
+        <section>
+          <section class="about-me">
+            <h1>About me</h1>
+
+            <div>
+              <img class="img-no-frame" src="/img/me.png" alt="Juan Obando">
+              <h2>Juan Obando</h2>
+              <h3>Software Engineer from Universidad del Valle</h3>
+            </div>
+          </section>
+
+          <section>
+            <h1>Experience</h1>
+            <ul>
+              <li class="fragment roll-in"><h2>PHP, Ruby</h2></li>
+              <li class="fragment roll-in"><h2>MySQL, PostgreSQL</h2></li>
+              <li class="fragment roll-in"><h2>Git</h2></li>
+              <li class="fragment roll-in"><h2>HTML, CSS, JavaScript</h2></li>
+              <li class="fragment roll-in"><h2>Server administration: Linux & Windows</h2></li>
+            </ul>
+          </section>
+
+          <section>
+            <h1>Interests</h1>
+
+            <div>
+              <img class="img-no-frame" src="http://designthencode.com/scratch/images/xcode_icon.png" style="margin-right: 70px;">
+              <img class="img-no-frame" src="http://4.bp.blogspot.com/_bDlczh6zCMQ/RysKAsfom6I/AAAAAAAAAEw/f9kocHRcjAc/s320/256px-Ruby_logo.svg" alt="Ruby">
+            </div>
+          </section>
+        </section>
+
         <section>
           <h1>Agenda</h1>
           <ul>
-            <li class="fragment roll-in"><h2>Basic tips and tricks</h2></li>
-            <li class="fragment roll-in"><h2>Using the Console API</h2></li>
-            <li class="fragment roll-in"><h2>Networking</h2></li>
-            <li class="fragment roll-in"><h2>Mobile emulation</h2></li>
+            <li class="fragment roll-in"><a href="#/5"><h3>Basic tips and tricks</h3></a></li>
+            <li class="fragment roll-in"><a href="#/6"><h3>Using the Console API</h3></a></li>
+            <li class="fragment roll-in"><a href="#/7"><h3>Network timeline</h3></a></li>
+            <li class="fragment roll-in"><a href="#/8"><h3>Mobile emulation</h3></a></li>
+            <li class="fragment roll-in"><a href="#/9"><h3>Terminal on DevTools</h3></a></li>
           </ul>
         </section>
 
@@ -80,9 +118,10 @@
 
           <section>
             <ul>
-              <li><h3>Drag and drop</h3></li>
-              <li class="fragment roll-in"><h3>Force Element State</h3></li>
-              <li class="fragment roll-in"><h3>Break on...</h3></li>
+              <li><h3>Ctrl &#40;&#8984; for Mac&#41; + Shift + C to inspect</h3></li>
+              <li class="fragment roll-in"><h3>Drag and drop elements</h3></li>
+              <li class="fragment roll-in"><h3>Force element state</h3></li>
+              <li class="fragment roll-in"><h3>&ldquo;Break on...&rdquo; and breaking points</h3></li>
             </ul>
           </section>
         </section>
@@ -157,13 +196,44 @@ console.timeEnd("Measuring");
 
         <section>
           <section>
-            <h1>Networking</h1>
+            <h1>Network timeline</h1>
+          </section>
+
+          <section>
+            <ul>
+              <li><h3>Size/Content column</h3></li>
+              <li class="fragment roll-in"><h3>Time/Lantency column</h3></li>
+              <li class="fragment roll-in"><h3>Initiator column</h3></li>
+              <li class="fragment roll-in"><h3>HAR format: HTTP Archive Format</h3></li>
+            </ul>
           </section>
         </section>
 
         <section>
           <section>
             <h1>Mobile emulation</h1>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>Terminal on DevTools</h1>
+          </section>
+
+          <section>
+            <ol>
+              <li>Install <a href="https://chrome.google.com/webstore/detail/devtools-terminal/leakmhneaibbdapdoienlkifomjceknl" title="Devtools Terminal">Devtools Terminal</a> chrome extension</li>
+              <li>Install <a href="http://nodejs.org/download/" title="Node">node.js</a></li>
+              <li>
+                Install devtools-terminal package
+                <pre class="img-no-frame">
+                  <code data-trim>
+npm install -g devtools-terminal
+                  </code>
+                </pre>
+              </li>
+              <li>Run devtools-terminal tool</li>
+            </ol>
           </section>
         </section>
 
@@ -177,6 +247,8 @@ console.timeEnd("Measuring");
 
         <section data-background="img/inqbation-ppt-cover.jpg"></section>
       </div>
+
+      <!-- <div class="brand"></div> -->
     </div>
 
     <script src="lib/js/head.min.js"></script>

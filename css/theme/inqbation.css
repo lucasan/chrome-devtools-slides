@@ -142,9 +142,18 @@ body {
 .reveal section .img-no-frame {
   border: 0;
   box-shadow: none; }
+.reveal .brand {
+  background: transparent url("/img/inQbation-logo-RGB.png") no-repeat right 110px;
+  background-size: 250px 60px;
+  bottom: 20px;
+  height: 170px;
+  left: 142px;
+  position: fixed;
+  width: 250px;
+  z-index: 30; }
 .reveal .slide-number {
   background-color: #8c9f2b;
-  bottom: 20px;
+  bottom: 30px;
   color: white;
   font-size: 1em;
   height: 50px;
@@ -156,3 +165,15 @@ body {
   /* or 50% */
   border-radius: 30px;
   /* or 50% */ }
+.reveal .our-staff {
+  padding: 0 !important;
+  top: -410px !important; }
+.reveal .about-me > div {
+  text-align: left; }
+  .reveal .about-me > div img {
+    float: left;
+    margin-right: 25px; }
+  .reveal .about-me > div h2 {
+    margin-bottom: 35px; }
+
+/*# sourceMappingURL=inqbation.css.map */
