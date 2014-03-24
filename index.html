@@ -1,209 +1,321 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Chrome DevTools - inQbation KSR</title>
-<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-<meta name="author" content="Hakim El Hattab">
-<meta name="apple-mobile-web-app-capable" content="yes"/>
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<link rel="stylesheet" href="css/reveal.min.css">
-<link rel="stylesheet" href="css/theme/inqbation.css" id="theme">
-<link rel="stylesheet" href="lib/css/zenburn.css">
-<link rel="shortcut icon" href="https://developers.google.com/_static/54d310abfe/images/favicon.ico">
-<script>if(window.location.search.match(/print-pdf/gi)){var link=document.createElement("link");link.rel="stylesheet";link.type="text/css";link.href="css/print/pdf.css";document.getElementsByTagName("head")[0].appendChild(link)};</script>
-<!--[if lt IE 9]><script src="lib/js/html5shiv.js"></script><![endif]-->
-</head>
-<body>
-<div class="reveal">
-<div class="slides">
-<section data-background="img/inqbation-ppt-cover.jpg"></section>
-<section class="white-font-color" data-background="#8c9f2b">
-<h1>Chrome DevTools</h1>
-<h3>by Juan Obando</h3>
-</section>
-<section class="our-staff">
-<h1>Our staff</h1>
-<img class="img-no-frame" src="/img/inqbation-team-headshots.png" alt="inQbation Staff">
-</section>
-<section>
-<section class="about-me">
-<h1>About me</h1>https://github.com/juanchopx2/chrome-devtools-slides.git
-<div>
-<img class="img-no-frame" src="/img/me.png" alt="Juan Obando">
-<h2>Juan Obando</h2>
-<h3>Software Engineer from Universidad del Valle</h3>
-</div>
-</section>
-<section>
-<h1>Experience</h1>
-<ul>
-<li class="fragment roll-in"><h2>PHP, Ruby</h2></li>
-<li class="fragment roll-in"><h2>MySQL, PostgreSQL</h2></li>
-<li class="fragment roll-in"><h2>Git</h2></li>
-<li class="fragment roll-in"><h2>HTML, CSS, JavaScript</h2></li>
-<li class="fragment roll-in"><h2>Server administration: Linux & Windows</h2></li>
-</ul>
-</section>
-<section>
-<h1>Interests</h1>
-<div>
-<img class="img-no-frame" src="http://designthencode.com/scratch/images/xcode_icon.png" style="margin-right: 70px;">
-<img class="img-no-frame" src="http://4.bp.blogspot.com/_bDlczh6zCMQ/RysKAsfom6I/AAAAAAAAAEw/f9kocHRcjAc/s320/256px-Ruby_logo.svg" alt="Ruby">
-</div>
-</section>
-</section>
-<section>
-<a href="https://github.com/juanchopx2/chrome-devtools-slides.git" title="DevTools slides">https://github.com/juanchopx2/chrome-devtools-slides.git</a>
-</section>
-<section>
-<h1>Agenda</h1>
-<ul>
-<li class="fragment roll-in"><a href="#/5"><h3>Basic tips and tricks</h3></a></li>
-<li class="fragment roll-in"><a href="#/6"><h3>Using the Console API</h3></a></li>
-<li class="fragment roll-in"><a href="#/7"><h3>Network timeline</h3></a></li>
-<li class="fragment roll-in"><a href="#/8"><h3>Mobile emulation</h3></a></li>
-<li class="fragment roll-in"><a href="#/9"><h3>Terminal on DevTools</h3></a></li>
-</ul>
-</section>
-<section>
-<section>
-<h1>Basic tips and tricks</h1>
-</section>
-<section>
-<h2>Use Chrome Canary!</h2>
-<img class="img-no-frame" src="http://www.paulirish.com/lovesyou/new-browser-logos/chrome-canary-512.png" alt="Chrome Canary">
-</section>
-<section>
-<h2>Useful Settings</h2>
-<ul>
-<li><h3>Disable cache</h3></li>
-<li class="fragment roll-in"><h3>Log XMLHttpRequests</h3></li>
-<li class="fragment roll-in"><h3>Color format as authored</h3></li>
-<li class="fragment roll-in">
-<h3>Enable DevTools experiments: <a title="DevTools Experiments" target="_blank" class="roll">#enable-devtools-experiments</a></h3>
-</li>
-</ul>
-</section>
-<section>
-<ul>
-<li><h3>Ctrl &#40;&#8984; for Mac&#41; + Shift + C to inspect</h3></li>
-<li class="fragment roll-in"><h3>Drag and drop elements</h3></li>
-<li class="fragment roll-in"><h3>Force element state</h3></li>
-<li class="fragment roll-in"><h3>&ldquo;Break on...&rdquo; and breaking points</h3></li>
-</ul>
-</section>
-</section>
-<section>
-<section>
-<h1>Using the Console API</h1>
-</section>
-<section>
-<h3>Writing to the console</h3>
-<pre class="img-no-frame">
-              <code data-trim>
-console.log("Nothing new so far! :@");
+  <head>
+    <meta charset="utf-8">
+    <title>Introduction to CSS Preprocessors - inQbation KSR</title>
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/inqbation_new.css" id="theme">
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <link rel="shortcut icon" href="http://sass-lang.com/assets/img/ico/favicon-0ccd2d9d.png">
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+      if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+      }
+    </script>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-background="img/inqbation-ppt-cover.jpg"></section>
+        <section class="white-font-color" data-background="#8c9f2b">
+          <h1>Introduction to CSS Preprocessors</h1>
+          <p>Honestly... Just SaSS</p>
+          <h3>by Lucas Torres</h3>
+        </section>
+        <section class="our-staff">
+          <h1>Our staff</h1>
+          <img class="img-no-frame" src="/img/inqbation-team-headshots.png" alt="inQbation Staff">
+        </section>
+        <section>
+          <section class="about-me">
+            <h1>About me</h1>
+            <div>
+              <img class="img-no-frame" src="http://inqbation.com/es/wp-content/plugins/inqboxes-staff/box-includes/timthumb.php?src=http://inqbation.com/es/wp-content/uploads/2014/01/lucas.jpg&w=500&h=360&zc=1" width="500" alt="Lucas Torres">
+              <h2>Lucas Torres</h2>
+              <h3>Web Developer</h3>                            
+            </div>
+          </section>
+          <section>
+            <h1>About me</h1>
+            <ul>
+              <li class="fragment roll-in">Python, PHP</li>
+              <li class="fragment roll-in">HTML, CSS, JavaScript</li>
+              <li class="fragment roll-in">Drupal</li>
+              <li class="fragment roll-in">Crazy about UX and User Centered Design</li>
+              <li class="fragment roll-in">Playing with Node.js and MongoDB</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <h1>What are CSS Preprocessors?</h1>
+          <p>From Wikipedia: <blockquote>...a preprocessor is a program that processes its input data to produce output that is used as input to another program.</blockquote>
+          So, a CSS preprocessor receive some instructions and compile them to .css files</p>
+        </section>
+        <section>
+          <h1>And what can I do with them?</h1>
+          <p>Have you ever dream about using the advantages of a programming language with CSS? Well, that's what we are able to do with CSS preprocessors.</p>
+          <p><span class="fragment roll-in">Use <strong>variables</strong>,</span> <span class="fragment roll-in"><strong>functions</strong>,</span> <span class="fragment roll-in"><strong>mixins</strong>,</span> <span class="fragment roll-in"><strong>and more</strong>.</span></p>
+        </section>
+
+        <section>
+          <h1>Which one should I choose?</h1>
+          <p class="fragment roll-in">There are many CSS Preprocessors</p>
+          <img class="img-no-frame fragment roll-in" src="img/preprocessors.jpg" title="Less Vs SaSS Vs Stylus">
+        </section>     
+
+        <section>
+          <h1>Which one should I choose?</h1>
+          <p>I can't compete with more than 1 million results from Google ;)</p>
+          <img class="img-no-frame" src="img/preprocessors-vs.png" title="Google search sass vs less">
+        </section>
+
+        <section>
+          <h1>Which one should I choose?</h1>
+          <p>So, as with beer: Choose the one that tastes better for you</p>
+          <img class="img-no-frame" src="img/beers.jpg" title="Budweiser vs Heineken">
+        </section>
+
+        <section>
+          <h1>My personal taste is SaSS</h1>
+          <p><small>And in beer is Modelo Especial ;)</small></p>
+          <img class="img-no-frame" src="img/sass-screenshot.png" title="SaSS website screenshot">
+        </section>      
+
+        <section>
+          <h1>SaSS superpowers</h1>
+          <ul>
+              <li class="fragment roll-in">Variables</li>
+              <li class="fragment roll-in">Nesting</li>
+              <li class="fragment roll-in">Partials & Import</li>
+              <li class="fragment roll-in">Mixings</li>
+              <li class="fragment roll-in">Extend/Inheritance</li>
+              <li class="fragment roll-in">Operators</li>
+              <li class="fragment roll-in">And yes, functions!</li>
+          </ul>          
+        </section> 
+
+        <section>
+          <h1>Enough talking man, show me the code!</h1>
+          <p class="fragment roll-in">Since we don't have enough time to learn SaSS features from basics to advanced, I'll show the coolest ones so you can research deeper later.</p>
+          <p class="fragment roll-in"><small>You can go to <a href="http://sass-lang.com/documentation" target="_blank">http://sass-lang.com/documentation</a> to learn more</small></p>
+        </section>
+
+        <section data-markdown>
+          <p>Lets start with a simple css like this</p>
+          
+          <pre class="img-no-frame">
+              <code>
+              h1 {
+                font-size: 20px;
+                color: #666;
+              }
+
+              p {
+                color: #666;
+              }
+
+              .content {
+                overflow: hidden;
+                background-color: #F6F6F6;
+              }
+
+              .content h1 {
+                font-size: 18px;
+                color: #333;
+              }
+
+              .content p {
+                font-size: 12px;
+                text-shadow: 1px 1px 0 #000;
+                color: #333;
+              }
+
+              .content p a {
+                color: #666;
+                text-decoration: none;
+              }
               </code>
-            </pre>
-<h3>Warning and Errors</h3>
-<pre class="img-no-frame">
-              <code data-trim>
-console.warn("This might be new!");
-console.error("and maybe, this one too");
+          </pre>
+        </section> 
+
+        <section>
+          <p>Now, the same code, written in SaSS. Let's begin with <strong>variables</strong></p>
+          
+          <pre class="img-no-frame">
+              <code>
+  //You can define variables.
+  //BTW, comments like this won't compile in your CSS
+
+  $main_fg_color: #666;
+  $secondary_fg_color: #333;
+
+  h1 {
+    font-size: 20px;
+    color: $main_fg_color;
+  }
+
+  p {
+    color: $main_fg_color;
+  }
+
+  .content {
+    overflow: hidden;
+    background-color: #F6F6F6;
+  }
+
+  .content h1 {
+    font-size: 18px;
+    color: $secondary_fg_color;
+  }
+
+  .content p {
+    font-size: 12px;
+    text-shadow: 1px 1px 0 #000;
+    color: $secondary_fg_color;
+  }
+
+  .content p a {
+    color: $main_fg_color;
+    text-decoration: none;
+  }
               </code>
-            </pre>
-<h3>Grouping output</h3>
-<pre class="img-no-frame">
-              <code data-trim>
-console.group("Just reminding some tips about console");
-console.log("Nothing new so far! :@");
-console.warn("This might be new!");
-console.error("and maybe, this one too");
-console.groupEnd();
+          </pre>
+
+          <p class="fragment roll-in">SaSS allows you to use <strong>variables</strong>, so you can stick to the <acronym title="Don't repeat yourself">DRY</acronym> principle and keep the code simple and easy to maintain.</p>
+        </section> 
+
+        <section>
+          <p>What about <strong>nesting</strong>?</p>
+          
+          <pre class="img-no-frame">
+              <code>
+  /*
+  * You can nest your selectors.
+  * and guess what?
+  * Yes! this comment will be compiled to your CSS
+  */
+
+  $main_fg_color: #666;
+  $secondary_fg_color: #333; 
+
+  h1 {
+      font-size: 20px;
+      color: $main_fg_color;
+  }
+
+  p {
+    color: $main_fg_color;
+  }
+
+  .content {
+        overflow: hidden;
+        background-color: #F6F6F6;
+
+      h1 {
+          font-size: 18px;
+          color: $secondary_fg_color;
+      }
+
+      p {
+          font-size: 12px;
+          text-shadow: 1px 1px 0 #000;
+          color: $secondary_fg_color;
+
+          a {
+              color: $main_fg_color;
+              text-decoration: none;
+          }
+      }
+  }
               </code>
-            </pre>
-</section>
-<section>
-<h3>String substitution and formatting</h3>
-<pre class="img-no-frame">
-              <code data-trim>
-console.log("%s %i of times!", "Nothing new! Have seen this", 1000);
-              </code>
-            </pre>
-<h3>Styling console output with CSS</h3>
-<pre class="img-no-frame">
-              <code data-trim>
-console.log("%cStylish output", "color: #ff0000; font-size: 16px;");
-              </code>
-            </pre>
-<h3>Listing all element properties</h3>
-<pre class="img-no-frame">
-              <code data-trim>
-console.dir(document.body);
-              </code>
-            </pre>
-</section>
-<section>
-<h3>Measuring how long something takes</h3>
-<pre class="img-no-frame">
-              <code data-trim>
-console.time("Measuring");
-// your code here
-console.timeEnd("Measuring");
-              </code>
-            </pre>
-</section>
-</section>
-<section>
-<section>
-<h1>Network timeline</h1>
-</section>
-<section>
-<ul>
-<li><h3>Size/Content column</h3></li>
-<li class="fragment roll-in"><h3>Time/Lantency column</h3></li>
-<li class="fragment roll-in"><h3>Initiator column</h3></li>
-<li class="fragment roll-in"><h3>HAR format: HTTP Archive Format</h3></li>
-</ul>
-</section>
-</section>
-<section>
-<section>
-<h1>Mobile emulation</h1>
-</section>
-</section>
-<section>
-<section>
-<h1>Terminal on DevTools</h1>
-</section>
-<section>
-<ol>
-<li>Install <a href="https://chrome.google.com/webstore/detail/devtools-terminal/leakmhneaibbdapdoienlkifomjceknl" title="Devtools Terminal">Devtools Terminal</a> chrome extension</li>
-<li>Install <a href="http://nodejs.org/download/" title="Node">node.js</a></li>
-<li>
-Install devtools-terminal package
-<pre class="img-no-frame">
-                  <code data-trim>
-npm install -g devtools-terminal
-                  </code>
-                </pre>
-</li>
-<li>Run devtools-terminal tool</li>
-</ol>
-</section>
-</section>
-<section class="white-font-color" data-background="#8c9f2b">
-<h1>Questions?</h1>
-</section>
-<section class="white-font-color" data-background="#8c9f2b">
-<h1>Thank you!</h1>
-</section>
-<section data-background="img/inqbation-ppt-cover.jpg"></section>
-</div>
-</div>
-<script src="lib/js/head.min.js"></script>
-<script src="js/reveal.min.js"></script>
-<script>Reveal.initialize({controls:true,progress:true,history:true,center:true,slideNumber:true,theme:Reveal.getQueryHash().theme,transition:Reveal.getQueryHash().transition||"linear",dependencies:[{src:"lib/js/classList.js",condition:function(){return !document.body.classList}},{src:"plugin/markdown/marked.js",condition:function(){return !!document.querySelector("[data-markdown]")}},{src:"plugin/markdown/markdown.js",condition:function(){return !!document.querySelector("[data-markdown]")}},{src:"plugin/highlight/highlight.js",async:true,callback:function(){hljs.initHighlightingOnLoad()}},{src:"plugin/zoom-js/zoom.js",async:true,condition:function(){return !!document.body.classList}},{src:"plugin/notes/notes.js",async:true,condition:function(){return !!document.body.classList}}]});</script>
-</body>
+          </pre>
+
+          <p class="fragment roll-in">You can <strong>nest</strong> selectors, just as in HTML. <br>Make sense, right?</p>
+        </section>    
+
+        <section>
+          <p>Talkng about easy to maintain, let me introduce you <strong>partials & import</strong></p>
+
+          <pre>  
+  _text.scss     
+            <code>
+  p {
+    color: #333;
+
+    a { color: #000; text-decoration: none; }
+  }              
+            </code>
+  main.scss
+            <code>
+  @import "text";              
+            </code>            
+          </pre>
+
+          <p class="fragment roll-in">SaSS won't compile any file with an underscore at the beginning (that's a <strong>partial</strong>), and the <strong>@import </strong> directive would import (duh!) that file.</p>    
+
+        </section>
+
+        <section>
+          <p>Want so see some real action? Ok, let's check the</p>
+          <h1>Mixins</h1>
+        </section>
+
+        <section>
+          <h1>Mixins</h1>
+          
+        </section>
+
+        <section class="white-font-color" data-background="#8c9f2b">
+          <h1>Questions?</h1>
+        </section>
+
+        <section class="white-font-color" data-background="#8c9f2b">
+          <h1>Thank you!</h1>
+        </section>
+
+        <section data-background="img/inqbation-ppt-cover.jpg"></section>
+      </div>
+      <!-- <div class="brand"></div> -->
+    </div>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+    <script>
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        slideNumber: true,
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+        // Parallax scrolling
+        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+        // parallaxBackgroundSize: '2100px 900px',
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+
+    </script>
+  </body>
 </html>
