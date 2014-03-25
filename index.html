@@ -70,31 +70,26 @@
           <p>Have you ever dream about using the advantages of a programming language with CSS? Well, that's what we are able to do with CSS preprocessors.</p>
           <p><span class="fragment roll-in">Use <strong>variables</strong>,</span> <span class="fragment roll-in"><strong>functions</strong>,</span> <span class="fragment roll-in"><strong>mixins</strong>,</span> <span class="fragment roll-in"><strong>and more</strong>.</span></p>
         </section>
-
         <section>
           <h1>Which one should I choose?</h1>
           <p class="fragment roll-in">There are many CSS Preprocessors</p>
           <img class="img-no-frame fragment roll-in" src="img/preprocessors.jpg" title="Less Vs SaSS Vs Stylus">
         </section>     
-
         <section>
           <h1>Which one should I choose?</h1>
           <p>I can't compete with more than 1 million results from Google ;)</p>
           <img class="img-no-frame" src="img/preprocessors-vs.png" title="Google search sass vs less">
         </section>
-
         <section>
           <h1>Which one should I choose?</h1>
           <p>So, as with beer: Choose the one that tastes better for you</p>
           <img class="img-no-frame" src="img/beers.jpg" title="Budweiser vs Heineken">
         </section>
-
         <section>
           <h1>My personal taste is SaSS</h1>
           <p><small>And in beer is Modelo Especial ;)</small></p>
           <img class="img-no-frame" src="img/sass-screenshot.png" title="SaSS website screenshot">
         </section>      
-
         <section>
           <h1>SaSS superpowers</h1>
           <ul>
@@ -107,43 +102,35 @@
               <li class="fragment roll-in">And yes, functions!</li>
           </ul>          
         </section> 
-
         <section>
           <h1>Enough talking man, show me the code!</h1>
           <p class="fragment roll-in">Since we don't have enough time to learn SaSS features from basics to advanced, I'll show the coolest ones so you can research deeper later.</p>
           <p class="fragment roll-in"><small>You can go to <a href="http://sass-lang.com/documentation" target="_blank">http://sass-lang.com/documentation</a> to learn more</small></p>
         </section>
-
         <section data-markdown>
           <p>Lets start with a simple css like this</p>
-          
           <pre class="img-no-frame">
               <code>
               h1 {
                 font-size: 20px;
                 color: #666;
               }
-
               p {
                 color: #666;
               }
-
               .content {
                 overflow: hidden;
                 background-color: #F6F6F6;
               }
-
               .content h1 {
                 font-size: 18px;
                 color: #333;
               }
-
               .content p {
                 font-size: 12px;
                 text-shadow: 1px 1px 0 #000;
                 color: #333;
               }
-
               .content p a {
                 color: #666;
                 text-decoration: none;
@@ -151,56 +138,45 @@
               </code>
           </pre>
         </section> 
-
         <section>
           <p>Now, the same code, written in SaSS. Let's begin with <strong>variables</strong></p>
-          
           <pre class="img-no-frame">
               <code>
   //You can define variables.
   //BTW, comments like this won't compile in your CSS
-
   $main_fg_color: #666;
   $secondary_fg_color: #333;
-
   h1 {
     font-size: 20px;
     color: $main_fg_color;
   }
-
   p {
     color: $main_fg_color;
   }
-
   .content {
     overflow: hidden;
     background-color: #F6F6F6;
   }
-
   .content h1 {
     font-size: 18px;
     color: $secondary_fg_color;
   }
-
   .content p {
     font-size: 12px;
     text-shadow: 1px 1px 0 #000;
     color: $secondary_fg_color;
   }
-
   .content p a {
     color: $main_fg_color;
     text-decoration: none;
   }
               </code>
           </pre>
-
           <p class="fragment roll-in">SaSS allows you to use <strong>variables</strong>, so you can stick to the <acronym title="Don't repeat yourself">DRY</acronym> principle and keep the code simple and easy to maintain.</p>
+          <p><small>Gist <a target="_blank" href="http://sassmeister.com/gist/9771767">http://sassmeister.com/gist/9771767</a></small></p>
         </section> 
-
         <section>
           <p>What about <strong>nesting</strong>?</p>
-          
           <pre class="img-no-frame">
               <code>
   /*
@@ -208,33 +184,26 @@
   * and guess what?
   * Yes! this comment will be compiled to your CSS
   */
-
   $main_fg_color: #666;
   $secondary_fg_color: #333; 
-
   h1 {
       font-size: 20px;
       color: $main_fg_color;
   }
-
   p {
     color: $main_fg_color;
   }
-
   .content {
         overflow: hidden;
         background-color: #F6F6F6;
-
       h1 {
           font-size: 18px;
           color: $secondary_fg_color;
       }
-
       p {
           font-size: 12px;
           text-shadow: 1px 1px 0 #000;
           color: $secondary_fg_color;
-
           a {
               color: $main_fg_color;
               text-decoration: none;
@@ -243,19 +212,16 @@
   }
               </code>
           </pre>
-
           <p class="fragment roll-in">You can <strong>nest</strong> selectors, just as in HTML. <br>Make sense, right?</p>
+          <p><small>Gist <a target="_blank" href="http://sassmeister.com/gist/9771826">http://sassmeister.com/gist/9771826</a></small></p>
         </section>    
-
         <section>
-          <p>Talkng about easy to maintain, let me introduce you <strong>partials & import</strong></p>
-
-          <pre>  
+          <p>Talking about easy to maintain, let me introduce you <strong>partials & import</strong></p>
+          <pre class="img-no-frame">  
   _text.scss     
             <code>
   p {
     color: #333;
-
     a { color: #000; text-decoration: none; }
   }              
             </code>
@@ -264,11 +230,8 @@
   @import "text";              
             </code>            
           </pre>
-
           <p class="fragment roll-in">SaSS won't compile any file with an underscore at the beginning (that's a <strong>partial</strong>), and the <strong>@import </strong> directive would import (duh!) that file.</p>    
-
         </section>
-
         <section>
           <p>Want so see some real action? Ok, let's check the</p>
           <h1>Mixins</h1>
@@ -276,17 +239,144 @@
 
         <section>
           <h1>Mixins</h1>
-          
+          <p>Reuse instead of rewrite, that should be the definition of <strong>Mixins</strong>.</p>
+          <pre class="img-no-frame">
+            <code>
+  //Define de Mixin properties
+  @mixin shaded-box {
+      -webkit-box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow:    2px 2px 0px rgba(0, 0, 0, 0.75);
+      box-shadow:         2px 2px 0px rgba(0, 0, 0, 0.75);
+      padding: 5px;
+  }
+
+  //Apply the Mixin
+  .content {
+      background-color: #F6F6F6;
+      @include shaded-box;
+  }        
+            </code>            
+          </pre> 
+          <p><small>Gist <a target="_blank" href="http://sassmeister.com/gist/9772361">http://sassmeister.com/gist/9772361</a></small></p>         
         </section>
+
+        <section>
+          <h1>Mixins with arguments</h1>
+          <p>They look like functions, but they are not. (isn't it a superpower?)</p>
+          <pre class="img-no-frame">
+            <code>
+  //Define de Mixin properties
+  @mixin shaded-box( $blur, $opacity ) {
+      -webkit-box-shadow: 2px 2px $blur rgba(0, 0, 0, $opacity);
+      -moz-box-shadow:    2px 2px $blur rgba(0, 0, 0, $opacity);
+      box-shadow:         2px 2px $blur rgba(0, 0, 0, $opacity);
+      padding: 5px;
+  }
+
+  //Apply the Mixin
+  .content {
+      background-color: #F6F6F6;
+      @include shaded-box( 2px, 0.75 );
+  }        
+            </code>            
+          </pre>   
+          <p><small>Gist <a target="_blank" href="http://sassmeister.com/gist/9772390">http://sassmeister.com/gist/9772390</a></small></p>       
+        </section>    
+
+        <section>
+          <h1>Functions</h1>
+          <p>No more child games! Let's use CSS as a programming language</p>
+          <pre class="img-no-frame">
+            <code>
+  @function set-background($img: false, $color: #F4F4F4)
+  {
+      @if $img != false {
+          @return #{$color} url(#{$img}) no-repeat left top;
+      }
+      @else {
+          @return #{$color};
+      }
+  }
+
+  .container {
+      background: set-background("photo.png", #000);
+  }   
+            </code>            
+          </pre>  
+          <p>Not an useful function, but.. it's a function inside CSS!</p>  
+          <p><small>Gist <a target="_blank" href="http://sassmeister.com/gist/9772407">http://sassmeister.com/gist/9772407</a></small></p>      
+        </section>    
+
+        <section>
+          <h1>Control Directives</h1>
+          <p>I bet you saw the @if statement in the last slide, well, there is more for you.</p>
+          <pre class="img-no-frame">
+            <code>
+  //Create a quick grid
+  /* Number of columns */
+  $columns: 12;
+
+  @for $i from 1 through $columns {
+      .col-#{$i} {
+          width: (100% / $columns) * $i;
+          float: left;
+      }
+  }
+            </code>            
+          </pre>  
+          <p>You can use @if, @else if, @else, @for, @each and @while</p>        
+          <p><small>Gist <a target="_blank" href="http://sassmeister.com/gist/9772438">http://sassmeister.com/gist/9772438</a></small></p> 
+        </section>
+
+        <section>
+          <h1>Control Directives</h1>
+          <p>Now, the same grid but using a function</p>
+          <pre class="img-no-frame">
+            <code>
+
+ @function get-col-width($width, $columns, $number){
+      @return ($width / $columns) * $number;
+  }
+
+  $columns: 6;
+
+  @for $i from 1 through $columns {
+      .columns-#{$i} {
+          width: get-col-width(960px, $columns, $i);
+          @if $i < $columns {
+            float: left;
+          }
+          @else {
+            float: right;
+          }
+      }
+  }
+            </code>            
+          </pre>   
+
+          <p><small>Gist <a target="_blank" href="http://sassmeister.com/gist/9772499">http://sassmeister.com/gist/9772499</a></small></p>      
+        </section>   
+
+        <section>
+          <h1>Wait! It gets even better!</h1>
+          <p class="fragment roll-in">Reinventing the wheel is not nice...</p>
+          <img class="img-no-frame fragment roll-in" src="img/compass-screenshot.png" title="Compass Screenshot">
+          <p class="fragment roll-in">You can reuse <strong>Compass</strong> mixins, functions and more.</p>
+        </section> 
+
+        <section>
+          <h1>Compass</h1>
+          <p>A brief example with Compass</p>
+          <p><small>Gist <a target="_blank" href="http://sassmeister.com/gist/9773018">http://sassmeister.com/gist/9773018</a></small></p> 
+          <p>And let's proceed with some questions.</p>
+        </section>         
 
         <section class="white-font-color" data-background="#8c9f2b">
           <h1>Questions?</h1>
         </section>
-
         <section class="white-font-color" data-background="#8c9f2b">
           <h1>Thank you!</h1>
         </section>
-
         <section data-background="img/inqbation-ppt-cover.jpg"></section>
       </div>
       <!-- <div class="brand"></div> -->
@@ -315,7 +405,6 @@
           { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
         ]
       });
-
     </script>
   </body>
 </html>
