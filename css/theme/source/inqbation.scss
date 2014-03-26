@@ -39,7 +39,7 @@ $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
 .reveal {
 
   h1 {
-    font-size: 2.3em;
+    font-size: 2em;
     margin-bottom: 45px;
   }
 
@@ -112,3 +112,17 @@ $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
   }
 }
 
+.half-screen {
+  width: 50%;
+  float: left;
+
+  &:last-child {
+    float: right;
+  }
+
+  h2 {
+    font-size: 1.6em;
+    margin-bottom: 0;
+  }
+
+}

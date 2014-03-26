@@ -40,13 +40,21 @@
           <h1>Our staff</h1>
           <img class="img-no-frame" src="img/inqbation-team-headshots.png" alt="inQbation Staff">
         </section>
+        <section class="white-font-color" data-background="#8c9f2b">
+          <h1>You can be part of our staff!</h1>
+          <h3>inQbation is looking for two great developers</h3>
+          <ul>
+            <li>HTML, CSS and Js lover? You can be our next Front-end developer</li>
+            <li>Enjoy coding in Python, PHP and Drupal? Then the back-end developer spot could be yours</li>
+          </ul>
+        </section>        
         <section>
           <section class="about-me">
             <h1>About me</h1>
             <div>
               <img class="img-no-frame" src="http://inqbation.com/es/wp-content/plugins/inqboxes-staff/box-includes/timthumb.php?src=http://inqbation.com/es/wp-content/uploads/2014/01/lucas.jpg&w=500&h=360&zc=1" width="500" alt="Lucas Torres">
               <h2>Lucas Torres</h2>
-              <h3>Web Developer</h3>                            
+              <h3>Web Developer at inQbation</h3>                            
             </div>
           </section>
           <section>
@@ -89,7 +97,68 @@
           <h1>My personal taste is SaSS</h1>
           <p><small>And in beer is Modelo Especial ;)</small></p>
           <img class="img-no-frame" src="img/sass-screenshot.png" title="SaSS website screenshot">
-        </section>      
+        </section>
+
+        <section>
+          <h1>Main differences: SaSS Vs. Less</h1>
+          
+          <div class="half-screen">
+            <h2>SaSS</h2>
+            <pre class="img-no-frame">
+                <code>
+//Variables
+@main_color: #000;
+
+//Nesting
+p {
+    color: @main_color;
+
+    a {
+        text-decoration: underline;
+    }
+}
+
+//Mixins
+.shaded-box {
+    box-shadow: 2px 2px 0px #000;
+}
+
+//Functions
+/* 404 not found :( */
+                </code>
+            </pre>            
+          </div>
+
+          <div class="half-screen">
+            <h2>Less</h2>
+            <pre class="img-no-frame">
+                <code>
+//Variables
+$main_color: #000;
+
+//Nesting
+p {
+    color: $main_color;
+
+    a {
+        text-decoration: underline;
+    }
+}
+
+//Mixins
+@mixin shaded-box {
+    box-shadow: 2px 2px 0px #000;
+}
+
+//Functions
+@function some-function($arg) {
+    @return $arg;
+}
+                </code>
+            </pre>              
+          </div>
+        </section>
+
         <section>
           <h1>SaSS superpowers</h1>
           <ul>
@@ -236,7 +305,6 @@
           <p>Want so see some real action? Ok, let's check the</p>
           <h1>Mixins</h1>
         </section>
-
         <section>
           <h1>Mixins</h1>
           <p>Reuse instead of rewrite, that should be the definition of <strong>Mixins</strong>.</p>
@@ -249,7 +317,6 @@
       box-shadow:         2px 2px 0px rgba(0, 0, 0, 0.75);
       padding: 5px;
   }
-
   //Apply the Mixin
   .content {
       background-color: #F6F6F6;
@@ -259,7 +326,6 @@
           </pre> 
           <p><small>Gist <a target="_blank" href="http://sassmeister.com/gist/9772361">http://sassmeister.com/gist/9772361</a></small></p>         
         </section>
-
         <section>
           <h1>Mixins with arguments</h1>
           <p>They look like functions, but they are not. (isn't it a superpower?)</p>
@@ -272,7 +338,6 @@
       box-shadow:         2px 2px $blur rgba(0, 0, 0, $opacity);
       padding: 5px;
   }
-
   //Apply the Mixin
   .content {
       background-color: #F6F6F6;
@@ -282,7 +347,6 @@
           </pre>   
           <p><small>Gist <a target="_blank" href="http://sassmeister.com/gist/9772390">http://sassmeister.com/gist/9772390</a></small></p>       
         </section>    
-
         <section>
           <h1>Functions</h1>
           <p>No more child games! Let's use CSS as a programming language</p>
@@ -297,7 +361,6 @@
           @return #{$color};
       }
   }
-
   .container {
       background: set-background("photo.png", #000);
   }   
@@ -306,7 +369,6 @@
           <p>Not an useful function, but.. it's a function inside CSS!</p>  
           <p><small>Gist <a target="_blank" href="http://sassmeister.com/gist/9772407">http://sassmeister.com/gist/9772407</a></small></p>      
         </section>    
-
         <section>
           <h1>Control Directives</h1>
           <p>I bet you saw the @if statement in the last slide, well, there is more for you.</p>
@@ -315,7 +377,6 @@
   //Create a quick grid
   /* Number of columns */
   $columns: 12;
-
   @for $i from 1 through $columns {
       .col-#{$i} {
           width: (100% / $columns) * $i;
@@ -327,19 +388,15 @@
           <p>You can use @if, @else if, @else, @for, @each and @while</p>        
           <p><small>Gist <a target="_blank" href="http://sassmeister.com/gist/9772438">http://sassmeister.com/gist/9772438</a></small></p> 
         </section>
-
         <section>
           <h1>Control Directives</h1>
           <p>Now, the same grid but using a function</p>
           <pre class="img-no-frame">
             <code>
-
  @function get-col-width($width, $columns, $number){
       @return ($width / $columns) * $number;
   }
-
   $columns: 6;
-
   @for $i from 1 through $columns {
       .columns-#{$i} {
           width: get-col-width(960px, $columns, $i);
@@ -353,24 +410,20 @@
   }
             </code>            
           </pre>   
-
           <p><small>Gist <a target="_blank" href="http://sassmeister.com/gist/9772499">http://sassmeister.com/gist/9772499</a></small></p>      
         </section>   
-
         <section>
           <h1>Wait! It gets even better!</h1>
           <p class="fragment roll-in">Reinventing the wheel is not nice...</p>
           <img class="img-no-frame fragment roll-in" src="img/compass-screenshot.png" title="Compass Screenshot">
           <p class="fragment roll-in">You can reuse <strong>Compass</strong> mixins, functions and more.</p>
         </section> 
-
         <section>
           <h1>Compass</h1>
           <p>A brief example with Compass</p>
           <p><small>Gist <a target="_blank" href="http://sassmeister.com/gist/9773018">http://sassmeister.com/gist/9773018</a></small></p> 
           <p>And let's proceed with some questions.</p>
         </section>         
-
         <section class="white-font-color" data-background="#8c9f2b">
           <h1>Questions?</h1>
         </section>
