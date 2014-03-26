@@ -103,33 +103,6 @@
           <h1>Main differences: SaSS Vs. Less</h1>
           
           <div class="half-screen">
-            <h2>Less</h2>
-            <pre class="img-no-frame">
-                <code>
-//Variables
-@main_color: #000;
-
-//Nesting
-p {
-    color: @main_color;
-
-    a {
-        text-decoration: underline;
-    }
-}
-
-//Mixins
-.shaded-box {
-    box-shadow: 2px 2px 0px #000;
-}
-
-//Functions
-/* 404 not found :( */
-                </code>
-            </pre>            
-          </div>
-
-          <div class="half-screen">
             <h2>SaSS</h2>
             <pre class="img-no-frame">
                 <code>
@@ -154,6 +127,33 @@ p {
 @function some-function($arg) {
     @return $arg;
 }
+                </code>
+            </pre>            
+          </div>
+
+          <div class="half-screen">
+            <h2>Less</h2>
+            <pre class="img-no-frame">
+                <code>
+//Variables
+@main_color: #000;
+
+//Nesting
+p {
+    color: @main_color;
+
+    a {
+        text-decoration: underline;
+    }
+}
+
+//Mixins
+.shaded-box {
+    box-shadow: 2px 2px 0px #000;
+}
+
+//Functions
+/* 404 not found :( */
                 </code>
             </pre>              
           </div>
